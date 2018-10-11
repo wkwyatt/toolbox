@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D2E2F01216E5075006B93E6 /* Toolbox.Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E2EFB216E5075006B93E6 /* Toolbox.Event.swift */; };
-		8D2E2F02216E5075006B93E6 /* Toolbox.App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E2EFC216E5075006B93E6 /* Toolbox.App.swift */; };
-		8D2E2F03216E5075006B93E6 /* Toolbox.Faker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E2EFD216E5075006B93E6 /* Toolbox.Faker.swift */; };
-		8D2E2F04216E5075006B93E6 /* Toolbox.Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E2EFE216E5075006B93E6 /* Toolbox.Notification.swift */; };
-		8D2E2F05216E5075006B93E6 /* Toolbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E2EFF216E5075006B93E6 /* Toolbox.swift */; };
-		8D2E2F06216E5075006B93E6 /* Toolbox.Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E2F00216E5075006B93E6 /* Toolbox.Device.swift */; };
-		8D2E2F0A216E50EA006B93E6 /* RNBatteryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E2F08216E50EA006B93E6 /* RNBatteryManager.swift */; };
-		8D2E2F0B216E50EA006B93E6 /* RNBatteryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E2F09216E50EA006B93E6 /* RNBatteryManager.m */; };
 		B3E7B58A1CC2AC0600A0062D /* RNToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNToolbox.m */; };
 /* End PBXBuildFile section */
 
@@ -32,15 +24,6 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNToolbox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNToolbox.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D2E2EFA216E5074006B93E6 /* RNToolbox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNToolbox-Bridging-Header.h"; sourceTree = "<group>"; };
-		8D2E2EFB216E5075006B93E6 /* Toolbox.Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toolbox.Event.swift; sourceTree = "<group>"; };
-		8D2E2EFC216E5075006B93E6 /* Toolbox.App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toolbox.App.swift; sourceTree = "<group>"; };
-		8D2E2EFD216E5075006B93E6 /* Toolbox.Faker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toolbox.Faker.swift; sourceTree = "<group>"; };
-		8D2E2EFE216E5075006B93E6 /* Toolbox.Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toolbox.Notification.swift; sourceTree = "<group>"; };
-		8D2E2EFF216E5075006B93E6 /* Toolbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toolbox.swift; sourceTree = "<group>"; };
-		8D2E2F00216E5075006B93E6 /* Toolbox.Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toolbox.Device.swift; sourceTree = "<group>"; };
-		8D2E2F08216E50EA006B93E6 /* RNBatteryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNBatteryManager.swift; sourceTree = "<group>"; };
-		8D2E2F09216E50EA006B93E6 /* RNBatteryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNBatteryManager.m; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNToolbox.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNToolbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNToolbox.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,32 +51,15 @@
 			isa = PBXGroup;
 			children = (
 				8D2E2F07216E50B4006B93E6 /* RNToolbox */,
-				8D2E2EF9216E502A006B93E6 /* Toolbox */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		8D2E2EF9216E502A006B93E6 /* Toolbox */ = {
-			isa = PBXGroup;
-			children = (
-				8D2E2EFC216E5075006B93E6 /* Toolbox.App.swift */,
-				8D2E2F00216E5075006B93E6 /* Toolbox.Device.swift */,
-				8D2E2EFB216E5075006B93E6 /* Toolbox.Event.swift */,
-				8D2E2EFD216E5075006B93E6 /* Toolbox.Faker.swift */,
-				8D2E2EFE216E5075006B93E6 /* Toolbox.Notification.swift */,
-				8D2E2EFF216E5075006B93E6 /* Toolbox.swift */,
-			);
-			path = Toolbox;
 			sourceTree = "<group>";
 		};
 		8D2E2F07216E50B4006B93E6 /* RNToolbox */ = {
 			isa = PBXGroup;
 			children = (
-				8D2E2F09216E50EA006B93E6 /* RNBatteryManager.m */,
-				8D2E2F08216E50EA006B93E6 /* RNBatteryManager.swift */,
 				B3E7B5881CC2AC0600A0062D /* RNToolbox.h */,
 				B3E7B5891CC2AC0600A0062D /* RNToolbox.m */,
-				8D2E2EFA216E5074006B93E6 /* RNToolbox-Bridging-Header.h */,
 			);
 			path = RNToolbox;
 			sourceTree = "<group>";
@@ -155,15 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D2E2F04216E5075006B93E6 /* Toolbox.Notification.swift in Sources */,
-				8D2E2F03216E5075006B93E6 /* Toolbox.Faker.swift in Sources */,
-				8D2E2F06216E5075006B93E6 /* Toolbox.Device.swift in Sources */,
-				8D2E2F0B216E50EA006B93E6 /* RNBatteryManager.m in Sources */,
-				8D2E2F02216E5075006B93E6 /* Toolbox.App.swift in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNToolbox.m in Sources */,
-				8D2E2F01216E5075006B93E6 /* Toolbox.Event.swift in Sources */,
-				8D2E2F05216E5075006B93E6 /* Toolbox.swift in Sources */,
-				8D2E2F0A216E50EA006B93E6 /* RNBatteryManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
