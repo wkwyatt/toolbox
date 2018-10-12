@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D2E2F79217110C4006B93E6 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2E2F5721711077006B93E6 /* libReact.a */; };
 		B3E7B58A1CC2AC0600A0062D /* RNToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNToolbox.m */; };
 /* End PBXBuildFile section */
 
@@ -157,7 +156,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D2E2F79217110C4006B93E6 /* libReact.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
