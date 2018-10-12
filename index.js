@@ -8,4 +8,4 @@ const { RNToolbox, BatteryManager } = NativeModules;
 const TB = Util.native('RNToolbox');
 const TBBattery = Util.native('BatteryManager');
 
-export default { RNToolbox, BatteryManager, TBBattery };
+export default { RNToolbox, BatteryManager };
