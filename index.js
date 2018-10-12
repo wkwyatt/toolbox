@@ -1,6 +1,8 @@
 
-import { NativeModules } from 'react-native';
+import { NativeModules, NativeEventEmitter } from 'react-native';
 
 const { RNToolbox, BatteryManager } = NativeModules;
 
-export default { RNToolbox, BatteryManager };
+const TBBatteryManager = new NativeEventEmitter(BatteryManager);
+
+export default { RNToolbox, TBBatteryManager };
