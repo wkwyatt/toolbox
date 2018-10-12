@@ -14,7 +14,7 @@ RCT_EXPORT_METHOD(isAvailable: (RCTPromiseResolveBlock)resolve rejector:(RCTProm
     LAContext *context = [[LAContext alloc] init];
     if ([context canEvaluatePolicy:kLAPolicyDeviceOwnerAuthenticationWithBiometrics error: NULL]) {
         resolve(@(YES));
-    } else {
+    } else {
         resolve(@(NO));
     }
 }

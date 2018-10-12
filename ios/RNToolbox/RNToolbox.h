@@ -1,4 +1,6 @@
 
+#import <UIKit/UIKit.h>
+
 #if __has_include("RCTBridgeModule.h")
 #import "RCTBridgeModule.h"
 #elif __has_include(<React/RCTBridgeModule.h>)

@@ -1,6 +1,6 @@
 
-import { NativeModules, Text } from 'react-native';
+import { NativeModules } from 'react-native';
 
-const { RNToolbox, BatteryManager } = NativeModules;
+const { RNToolbox } = NativeModules;
 
-export default Text;
+export default RNToolbox;
