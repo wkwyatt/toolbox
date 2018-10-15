@@ -13,9 +13,8 @@
 		8D2E2F992171395E006B93E6 /* Toolbox.Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E2F932171395E006B93E6 /* Toolbox.Notification.swift */; };
 		8D2E2F9A2171395E006B93E6 /* Toolbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E2F942171395E006B93E6 /* Toolbox.swift */; };
 		8D2E2F9B2171395E006B93E6 /* Toolbox.Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E2F952171395E006B93E6 /* Toolbox.Device.swift */; };
-		8D2E2F9E21713ADA006B93E6 /* RNBatteryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E2F9C21713ADA006B93E6 /* RNBatteryManager.swift */; };
-		8D2E2F9F21713ADA006B93E6 /* RNBatteryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E2F9D21713ADA006B93E6 /* RNBatteryManager.m */; };
-		B3E7B58A1CC2AC0600A0062D /* RNToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNToolbox.m */; };
+		8D310A2321752F17002D14E5 /* TBBatteryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D310A2121752F17002D14E5 /* TBBatteryManager.m */; };
+		8D310A2421752F17002D14E5 /* TBBatteryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D310A2221752F17002D14E5 /* TBBatteryManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,11 +160,9 @@
 		8D2E2F932171395E006B93E6 /* Toolbox.Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toolbox.Notification.swift; sourceTree = "<group>"; };
 		8D2E2F942171395E006B93E6 /* Toolbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toolbox.swift; sourceTree = "<group>"; };
 		8D2E2F952171395E006B93E6 /* Toolbox.Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toolbox.Device.swift; sourceTree = "<group>"; };
-		8D2E2F9C21713ADA006B93E6 /* RNBatteryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNBatteryManager.swift; sourceTree = "<group>"; };
-		8D2E2F9D21713ADA006B93E6 /* RNBatteryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNBatteryManager.m; sourceTree = "<group>"; };
 		8D2E2FA221713C26006B93E6 /* RNToolbox-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNToolbox-Bridging-Header.h"; sourceTree = "<group>"; };
-		B3E7B5881CC2AC0600A0062D /* RNToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNToolbox.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* RNToolbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNToolbox.m; sourceTree = "<group>"; };
+		8D310A2121752F17002D14E5 /* TBBatteryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBatteryManager.m; sourceTree = "<group>"; };
+		8D310A2221752F17002D14E5 /* TBBatteryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBBatteryManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,10 +198,8 @@
 		8D2E2F07216E50B4006B93E6 /* RNToolbox */ = {
 			isa = PBXGroup;
 			children = (
-				8D2E2F9D21713ADA006B93E6 /* RNBatteryManager.m */,
-				8D2E2F9C21713ADA006B93E6 /* RNBatteryManager.swift */,
-				B3E7B5881CC2AC0600A0062D /* RNToolbox.h */,
-				B3E7B5891CC2AC0600A0062D /* RNToolbox.m */,
+				8D310A2121752F17002D14E5 /* TBBatteryManager.m */,
+				8D310A2221752F17002D14E5 /* TBBatteryManager.swift */,
 			);
 			path = RNToolbox;
 			sourceTree = "<group>";
@@ -434,13 +429,12 @@
 			files = (
 				8D2E2F992171395E006B93E6 /* Toolbox.Notification.swift in Sources */,
 				8D2E2F982171395E006B93E6 /* Toolbox.Faker.swift in Sources */,
+				8D310A2321752F17002D14E5 /* TBBatteryManager.m in Sources */,
 				8D2E2F9B2171395E006B93E6 /* Toolbox.Device.swift in Sources */,
-				8D2E2F9F21713ADA006B93E6 /* RNBatteryManager.m in Sources */,
 				8D2E2F972171395E006B93E6 /* Toolbox.App.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* RNToolbox.m in Sources */,
+				8D310A2421752F17002D14E5 /* TBBatteryManager.swift in Sources */,
 				8D2E2F962171395E006B93E6 /* Toolbox.Event.swift in Sources */,
 				8D2E2F9A2171395E006B93E6 /* Toolbox.swift in Sources */,
-				8D2E2F9E21713ADA006B93E6 /* RNBatteryManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

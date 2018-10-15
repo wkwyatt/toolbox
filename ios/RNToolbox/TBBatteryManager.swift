@@ -9,8 +9,8 @@
 import Foundation
 
 
-@objc(BatteryManager)
-class RNBatteryManager: RCTEventEmitter
+@objc(TBBatteryManager)
+class TBBatteryManager: RCTEventEmitter
 {
     override func supportedEvents() -> [String]!
     {
