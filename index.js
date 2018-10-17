@@ -1,6 +1,7 @@
 
 import { NativeModules, NativeEventEmitter } from 'react-native';
 import Util from './src/Util';
+import Root from './src/Root';
 
 const { TBBatteryManager } = NativeModules;
 
@@ -8,4 +9,4 @@ const { TBBatteryManager } = NativeModules;
 // const TB = Util.native('RNToolbox');
 // const TBBattery = Util.native('BatteryManager');
 
-export default { TBBatteryManager };
+export { TBBatteryManager, Root };
