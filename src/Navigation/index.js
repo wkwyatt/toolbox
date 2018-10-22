@@ -3,6 +3,7 @@
 import React, {Component} from 'react'
 import { View, Keyboard } from 'react-native'
 import PropTypes from 'prop-types';
+import tbconfig from '@tbconfig';
 import {
     NavigationActions,
     createStackNavigator
@@ -25,6 +26,7 @@ class Navigation extends Component
         this.state = {
 
         };
+        console.log(tbconfig);
     }
 
     build = (initialRouteName) => {
