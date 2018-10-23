@@ -542,8 +542,18 @@
 					"$(SRCROOT)/../../node_modules/react-native/React/**",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../../node_modules/react-native/React/**",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-static-stdlib",
+					"-ILibraries/CVulkan/",
+				);
 				PRODUCT_NAME = RNToolbox;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Toolbox/RNToolbox-Bridging-Header.h";
@@ -564,8 +574,18 @@
 					"$(SRCROOT)/../../node_modules/react-native/React/**",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../../node_modules/react-native/React/**",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-static-stdlib",
+					"-ILibraries/CVulkan/",
+				);
 				PRODUCT_NAME = RNToolbox;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Toolbox/RNToolbox-Bridging-Header.h";

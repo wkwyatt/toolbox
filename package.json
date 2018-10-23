@@ -12,10 +12,21 @@
   "author": "",
   "license": "",
   "peerDependencies": {
+    "react": "^16.5.2",
     "react-native": "^0.41.2"
   },
   "dependencies": {
+    "babel": "^6.23.0",
+    "babel-plugin-module-alias": "^1.6.0",
     "lodash": "^4.17.11",
     "moment": "^2.22.2"
+  },
+  "babel":{
+    "plugins": [[
+      "module-alias", [
+        { "src": "./app", "expose": "app" },
+        { "src": "./app/resources/icon", "expose": "icon" }
+      ]
+    ]]
   }
 }

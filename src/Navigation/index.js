@@ -11,7 +11,8 @@ import {
 
 // import Util from "./../Util"
 // import Screen from './Screen'
-import Config from './../Config'
+import Root from './../Root'
+import Config from './../Config';
 import TestRoute from "./TestRoute";
 
 class Navigation extends Component
@@ -25,19 +26,21 @@ class Navigation extends Component
         this.state = {
 
         };
+
+        this.config = new Config();
+        console.log("NAV INIT -> ", this.config);
+        console.log("NAV INIT -> ", this.config.shared);
     }
 
-    build = (initialRouteName) => {
+    build = () => {
         // this.start = initialRouteName;
 
         // this.routes = this.generateRoutes();
-        let { config } = this.props;
-        let routes = config && (config.routes || {Home: TestRoute});
-        let initialRoute = config.initialRouteName || 'Home';
+        const { routes, initialRouteName } = this.props;
 
         let NavigationComponent = createStackNavigator(routes, {
             headerMode: 'float',
-            initialRouteName: initialRoute,
+            initialRouteName: initialRouteName,
         });
 
         return (
@@ -73,6 +76,8 @@ class Navigation extends Component
             return <SplashComponent/>;
         }
         */
+        console.log("NAV COMP CONFIG -> ", Config);
+        console.log("NAV COMP CONFIG -> ", Config.shared);
 
         return (
             <View style={{flex: 1}}>

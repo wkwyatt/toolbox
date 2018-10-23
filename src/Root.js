@@ -4,10 +4,9 @@ import React, {Component} from "react"
 import {StatusBar, View, Linking} from "react-native"
 import {MenuProvider} from 'react-native-popup-menu'
 
-// import rootConfig from '@rootConfig';
-// import TBConfig from '@TBConfig';
-
 import Navigation from './Navigation';
+import Config from "./Config";
+import DefaultConfig from "./DefaultConfig";
 
 // import App from "../App"
 // import Splash from "./Splash"
@@ -26,6 +25,8 @@ class Root extends Component
             loadingText: 'Loading',
             // isBooting: true
         };
+
+        Config.boot(this.props.config || DefaultConfig);
     }
 
     componentDidMount()
@@ -85,9 +86,6 @@ class Root extends Component
             return <SplashComponent/>;
         }
         */
-        let navConfig = {};
-        let { config } = this.props;
-        if (config != undefined && config != null) navConfig = config.Navigation || {};
 
         return (
             <View style={{flex: 1}}>
@@ -98,7 +96,7 @@ class Root extends Component
                     {/*isVisible={this.state.isLoading}/>*/}
 
                 <MenuProvider>
-                    <Navigation config={navConfig} />
+                    <Navigation routes={this.props.routes} initialRouteName={this.props.initialRouteName}/>
                 </MenuProvider>
             </View>
         );
