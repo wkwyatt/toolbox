@@ -8,10 +8,11 @@ import {
     createStackNavigator
 } from "react-navigation"
 
+import SFRoutes from '../SalesForce/Navigation';
 
 // import Util from "./../Util"
-// import Screen from './Screen'
-import Root from './../Root'
+import Screen from './Screen';
+import Root from './../Root';
 import Config from './../Config';
 import TestRoute from "./TestRoute";
 
@@ -27,16 +28,15 @@ class Navigation extends Component
 
         };
 
-        this.config = new Config();
-        console.log("NAV INIT -> ", this.config);
-        console.log("NAV INIT -> ", this.config.shared);
     }
 
     build = () => {
         // this.start = initialRouteName;
 
-        // this.routes = this.generateRoutes();
-        const { routes, initialRouteName } = this.props;
+        let routes = this.generateRoutes();
+        console.log('TBNAV @ build -> routes:', routes);
+
+        const { initialRouteName } = this.props;
 
         let NavigationComponent = createStackNavigator(routes, {
             headerMode: 'float',
@@ -49,19 +49,29 @@ class Navigation extends Component
     };
 
     generateRoutes() {
-        let { config } = this.props;
-        let routes = {};
-        for (let [parentKey, screens] of Object.entries(config.Navigation.routes)) {
+
+        let routes = this.props.routes;
+        if (this.props.sfLogin) {
+            routes = {...routes, Salesforce: [...SFRoutes]}
+        }
+        let generatedRoutes = {};
+        console.log('TBNAV @ generateRoutes -> routes:', routes);
+        for (let [parentKey, screens] of Object.entries(routes)) {
 
             for (let screenConfig of screens) {
+                console.log('TBNAV @ generateRoutes -> parentKey:', parentKey);
+                console.log('TBNAV @ generateRoutes -> screenConfig:', screenConfig);
+
                 // 'App@ScreenClassName'
                 let screen = Screen.make(this, screenConfig).options();
+                console.log('TBNAV @ generateRoutes -> screen:', screen);
                 screenConfig.component.constructor.Route = screenConfig.route;
-                routes[`${parentKey}@${screenConfig.route}`] = screen;
+                generatedRoutes[`${parentKey}@${screenConfig.route}`] = screen;
             }
         }
 
-        return routes;
+        console.log('TBNAV @ generateRoutes -> routes RETURN:', generatedRoutes);
+        return generatedRoutes;
     }
 
     render()
@@ -76,8 +86,6 @@ class Navigation extends Component
             return <SplashComponent/>;
         }
         */
-        console.log("NAV COMP CONFIG -> ", Config);
-        console.log("NAV COMP CONFIG -> ", Config.shared);
 
         return (
             <View style={{flex: 1}}>

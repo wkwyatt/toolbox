@@ -1,6 +1,6 @@
 
 import { NativeModules, NativeEventEmitter } from 'react-native';
-import Util from './src/Util';
+import Util from './src/Helpers/Util';
 import Root from './src/Root';
 
 const { TBBatteryManager } = NativeModules;

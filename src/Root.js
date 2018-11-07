@@ -1,12 +1,15 @@
 // @flow
 
 import React, {Component} from "react"
+import PropTypes from 'prop-types';
 import {StatusBar, View, Linking} from "react-native"
 import {MenuProvider} from 'react-native-popup-menu'
 
 import Navigation from './Navigation';
 import Config from "./Config";
 import DefaultConfig from "./DefaultConfig";
+import DB from './DB';
+import Storage from "./Storage";
 
 // import App from "../App"
 // import Splash from "./Splash"
@@ -26,7 +29,8 @@ class Root extends Component
             // isBooting: true
         };
 
-        Config.boot(this.props.config || DefaultConfig);
+        Config.userConfig = this.props.config;
+        Storage.boot(null);
     }
 
     componentDidMount()
@@ -96,7 +100,7 @@ class Root extends Component
                     {/*isVisible={this.state.isLoading}/>*/}
 
                 <MenuProvider>
-                    <Navigation routes={this.props.routes} initialRouteName={this.props.initialRouteName}/>
+                    <Navigation routes={this.props.routes} initialRouteName={this.props.initialRouteName} sfLogin />
                 </MenuProvider>
             </View>
         );
@@ -104,5 +108,14 @@ class Root extends Component
 
 
 }
+
+
+Root.propTypes = {
+    config: PropTypes.object
+};
+
+Root.defaultProps = {
+    config: DefaultConfig,
+};
 
 export default Root;

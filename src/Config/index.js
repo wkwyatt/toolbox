@@ -1,42 +1,39 @@
 import React, {Component} from "react"
 import {Text} from "react-native"
 
-import Util from "./../Util"
+import { Util } from "../Helpers"
+import DefaultConfig from '../DefaultConfig';
 
 export default class Config
 {
-    static shared;
-    static config;
+    static userConfig = undefined;
+    static defaultConfig = DefaultConfig;
 
     static get(key)
     {
-        console.log("Config File", this.config);
+        const config = { ...this.defaultConfig, ...this.userConfig } || {};
+
         return Util.get(
-            this.config, key
+            config, key
         );
     }
 
-    constructor(config) {
-        this.config = config;
+    static getDefault(key)
+    {
+        return Util.get(
+            this.defaultConfig, key
+        );
     }
 
-    static boot(config)
+    static boot()
     {
-        // if (__DEV__) {
+        if (__DEV__) {
             // If ReactNative's yellow box warnings are too much, it is possible to turn
             // it off, but the healthier approach is to fix the warnings.  =)
-            // console.disableYellowBox = true
-        // }
-
-        // Allow/disallow font-scaling in app
-        Text.defaultProps.allowFontScaling = true;
-
-        if (Config.shared) {
-            return Config.shared;
+            console.disableYellowBox = true
         }
 
-        Config.shared = new this(config);
-        return Config.shared;
+        // Allow/disallow font-scaling in app
+        Text.defaultProps.allowFontScaling = true
     }
-
 }

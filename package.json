@@ -16,17 +16,33 @@
     "react-native": "^0.41.2"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel": "^6.23.0",
     "babel-plugin-module-alias": "^1.6.0",
     "lodash": "^4.17.11",
-    "moment": "^2.22.2"
+    "moment": "^2.22.2",
+    "prop-types": "^15.6.2",
+    "qs": "^6.5.2",
+    "react-native-keychain": "^3.0.0",
+    "react-native-popup-menu": "^0.14.0",
+    "react-native-vector-icons": "^6.0.2",
+    "url-parse": "^1.4.3"
   },
-  "babel":{
-    "plugins": [[
-      "module-alias", [
-        { "src": "./app", "expose": "app" },
-        { "src": "./app/resources/icon", "expose": "icon" }
+  "babel": {
+    "plugins": [
+      [
+        "module-alias",
+        [
+          {
+            "src": "./app",
+            "expose": "app"
+          },
+          {
+            "src": "./app/resources/icon",
+            "expose": "icon"
+          }
+        ]
       ]
-    ]]
+    ]
   }
 }
