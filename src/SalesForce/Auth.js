@@ -6,6 +6,8 @@ import Device from '../Modules/Device';
 
 export default class Auth
 {
+    static module = undefined;
+
 	constructor(module, session) 
 	{
 		this.module = module;
@@ -100,7 +102,9 @@ export default class Auth
 
     loginPath()
     {
+        console.warn('Auth @ loginPath -> module', this.module);
         return new Promise((resolve,reject) => {
+            console.warn('Auth @ loginPath -> module', this.module);
             this.module.api().request('/services/oauth2/authorize', {
                 scope: 'full refresh_token',
                 response_type: 'code',

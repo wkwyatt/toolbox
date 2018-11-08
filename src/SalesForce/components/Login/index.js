@@ -183,9 +183,11 @@ export default class Login extends Screen
             if (!loginRoute) {
                 loginRoute = await this.defaultLoginPath(Salesforce);
             }
+            console.log('Salesforce.Login @ passed defaultLoginPath');
             if (!loginRoute) {
                 return;
             }
+            console.log('Salesforce.Login @ loginRoute', loginRoute);
 
             this.activeConnection = await Connection.active();
             // console.log('Login @ activeConnection', this.activeConnection);
@@ -210,7 +212,9 @@ export default class Login extends Screen
         console.log('Login @ defaultLoginPath -> sf', sf);
         console.log('Login @ defaultLoginPath -> Salesforce', this.salesforce);
         console.log('Login @ defaultLoginPath -> Salesforce', this.salesforce.auth);
+        console.log('Login @ defaultLoginPath -> UPDATES');
         let url = await this.salesforce.auth.loginPath();
+        console.log('Login @ defaultLoginPath -> Salesforce after loginPath');
         // let url = await sf.auth.loginPath();
         if (!this._isMounted) {
             return false;
